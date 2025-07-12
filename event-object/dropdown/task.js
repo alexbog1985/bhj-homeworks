@@ -8,7 +8,6 @@ function onClickBtn(e) {
 }
 
 function onClickLink(e) {
-  console.log(e.target);
   e.preventDefault();
   e.stopPropagation();
   dropdownValue.textContent = e.target.textContent;
