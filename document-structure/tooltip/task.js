@@ -7,7 +7,9 @@ function eventListeners() {
 function showTooltip(e) {
   e.preventDefault();
   const tooltip = e.target.nextElementSibling;
-  const rect = tooltip.getBoundingClientRect();
+  const rect = e.target.getBoundingClientRect();
+  tooltip.style.top = (rect.top + 20) + 'px';
+  tooltip.style.left = rect.left + 'px';
 
   const isActive = tooltip.classList.contains('tooltip_active');
   hideAllTooltips();
