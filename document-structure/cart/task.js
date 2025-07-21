@@ -12,7 +12,7 @@ products.forEach(product => {
     if (e.target.classList.contains('product__quantity-control_inc')) {
       value.textContent = +value.textContent + 1;
     }
-    if (e.target.classList.contains('product__quantity-control_dec') && +value.textContent > 0)  {
+    if (e.target.classList.contains('product__quantity-control_dec') && +value.textContent > 1)  {
       value.textContent = +value.textContent - 1;
     }
   });
