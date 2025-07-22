@@ -14,8 +14,10 @@ function listenerTabs() {
 }
 
 function onClickTab(e) {
+  if (!e.target.closest('.tab')) return;
+
   const oldIdx = tabsContents.findIndex(el => el.classList.contains('tab__content_active'));
-  const newIdx = [...tabsBox.children].indexOf(e.target.closest('.tab'));
+  const newIdx = tabs.indexOf(e.target.closest('.tab'));
 
   tabsContents[oldIdx].classList.remove('tab__content_active');
   tabs[oldIdx].classList.remove('tab_active');
